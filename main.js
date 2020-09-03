@@ -3,10 +3,13 @@ var fs = require('fs');
 var app = http.createServer(function(request,response) {
     var url = request.url;
     if(request.url == '/') {
-        url = 'index.html';
+        url = '/home.html';
     }
-    if(request.url == 'favicon.ico') {
-        return response.writeHead(404);
+    else if(request.url == '/income') {
+        url = '/income.html'
+    }
+    else if(request.url == '/outcome') {
+        url = '/outcome.html'
     }
     response.writeHead(200);
     response.end(fs.readFileSync(__dirname + url));
