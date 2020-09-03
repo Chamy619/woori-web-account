@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woori-Middle and High School Student-Church</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</head>
+
+<body>
+    <h1><a href="/">Woori-Middle and High School Student-Church</a></h1>
+    <ol>
+        <a href="/income">
+            <li> 수입 </li>
+        </a>
+        <a href="/outcome">
+            <li> 지출 </li>
+        </a>
+        <a href="/list">
+            <li> 거래 내역 </li>
+        </a>
+    </ol>
+    <p>
+        <h3>수입</h3>
+    <form action="/income_process" method="post">
+        <p><input type="text" name="title" placeholder="title"></p>
+        <p><input type="text" name="price" placeholder="price"></p>
+        <p><input type="text" name="date" id="datepicker" placeholder="choose date"></p>
+        <p><input type="submit"></p>
+    </form>
+    </p>
+    <h3> 잔액 </h3>
+</body>
+
+</html>
