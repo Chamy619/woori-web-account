@@ -28,6 +28,15 @@ var app = http.createServer(function (request, response) {
     else if (pathname === '/update') {
         play.update(request, response);
     }
+    else if (pathname === '/update_process/income') {
+        play.update_income(request, response);
+    }
+    else if (pathname === '/update_process/outcome') {
+        play.update_outcome(request, response);
+    }
+    else if (pathname === '/delete') {
+        play.delete(request, response);
+    }
     else {
         response.writeHead(404);
         response.end('Not Found');
